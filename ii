@@ -159,7 +159,7 @@ end)
 
 
 -- PASSCODE START
-local pass = "ColinSucks" -- Change it to yours password
+local pass = "020202" -- password
 local TxTBox = textbox
 local btn = loginbutton
 local gui = maingui
@@ -167,79 +167,37 @@ local toogle = status
 
 btn.MouseButton1Up:Connect(function()
 	if TxTBox.Text == pass then
-		toogle.Text = "Correct"
+		toogle.Text = "Correct, Loading Main Gui"
 		toogle.TextColor3 = Color3.new(0, 1, 0)
 		wait(0.5)
 		TxTBox.TextColor3 = Color3.new(0, 0, 0)
 		wait(1)
 		toogle.Text="..."
 		repeat frame = nil 
-			until
-frame1:TweenPosition(UDim2.new(0.599, 0,0.014, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine)
+		until
+		frame1:TweenSize(UDim2.new(0.253, 100,0.164, 100), Enum.EasingDirection.Out, Enum.EasingStyle.Sine)
 		wait(1)
+		frame1:TweenPosition(UDim2.new(0.599, 0,0.014, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine)
 		textbox:Destroy()
-		title.Text="Nicks Exploit Menu"
+		title.Text="Exploits Menu"
 		title:TweenPosition(UDim2.new(0.122, 0,0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine)
 		status:Destroy()
-		
+
 		loginbutton:TweenPosition(UDim2.new(0.064, 0,0.236, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine)
-		loginbutton.Text="Pilot Training Flight Simulator Free ATC Script"
+		loginbutton.Text="PTFS Free ATC Gamepass"
 		loginbutton.TextScaled=true
 		loginbutton.TextWrapped=true
-		click:Destroy()
-		local fire = Instance.new("ClickDetector")
-		local sith = loginbutton
-		sith.MouseButton1Up:Connect(function()
-			game.Players.LocalPlayer.UserId=1273413
-			local notif = Instance.new("Message")
-			notif.Parent=workspace
-			notif.Text="Pilot Training Flight Simulator Free ATC Script, Has Been Loaded"
-			wait(2)
-			notif:Destroy()
-		end)
-		discord:Destroy()
 		
-		
-		
-		
-		
-		
-		
-		
-		local UIS = game:GetService('UserInputService')
-		local frame = frame1
-		local dragToggle = nil
-		local dragSpeed = 0.25
-		local dragStart = nil
-		local startPos = nil
-
-		local function updateInput(input)
-			local delta = input.Position - dragStart
-			local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-				startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-			game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-		end
-
-		frame.InputBegan:Connect(function(input)
-			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-				dragToggle = true
-				dragStart = input.Position
-				startPos = frame.Position
-				input.Changed:Connect(function()
-					if input.UserInputState == Enum.UserInputState.End then
-						dragToggle = false
-					end
-				end)
-			end
+		local sith212 = loginbutton
+		local fire232 = Instance.new("ClickDetector")
+		fire232.Parent=sith212
+		sith212.MouseButton1Up:Connect(function()
+			print("PTFS Free ATC Gamepass")		
+            local plr = game.Players.LocalPlayer
+		    game.Players.LocalPlayer.UserId = 1273413
+			game.Players.LocalPlayer.DisplayName = "PREMIUM - "..plr.DisplayName
 		end)
 
-		UIS.InputChanged:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-				if dragToggle then
-					updateInput(input)
-				end
-			end
-		end)
 		
 		
 		
@@ -266,9 +224,21 @@ frame1:TweenPosition(UDim2.new(0.599, 0,0.014, 0), Enum.EasingDirection.Out, Enu
 		
 		
 		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
 	else 
-		toogle.Text = "Incorrect"
+		toogle.Text = "Incorrect, Please Try Again"
 		toogle.TextColor3 = Color3.new(1, 0, 0)
 		wait(0.5)
 		toogle.TextColor3 = Color3.new(1, 1, 1)
@@ -279,4 +249,3 @@ end)
 -- PASSCODE END
 
 print("c")
-
